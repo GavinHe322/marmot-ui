@@ -3,10 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarWebpackPlugin = require('progress-bar-webpack-plugin')
 
 const { VueLoaderPlugin } = require('vue-loader');
-console.log(
-  __dirname, '????',
-  path.join(__dirname, '../dist')
-)
+
 module.exports = {
   mode: 'development',
   entry: './src/main.js',
@@ -49,6 +46,20 @@ module.exports = {
           }
         ]
       },
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'vue-loader',
+          },
+          {
+            loader: 'vue-markdown-loader/lib/markdown-compiler',
+            options: {
+              raw: true
+            }
+          }
+        ]
+      }
     ]
   },
   resolve: {
