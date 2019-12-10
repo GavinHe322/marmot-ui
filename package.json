@@ -17,6 +17,7 @@
   "author": "Gavin",
   "license": "ISC",
   "dependencies": {
+    "highlight.js": "^9.16.2",
     "vue": "^2.6.10",
     "vue-router": "^3.1.3"
   },

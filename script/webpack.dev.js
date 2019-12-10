@@ -32,7 +32,7 @@ module.exports = {
         use: 'babel-loader'
       },
       {
-        test: /\.less$/,
+        test: /\.(less|css)$/,
         sideEffects: true,
         use: [
           'style-loader',
