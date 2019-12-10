@@ -1,3 +1,5 @@
+# Component starts with button
+
 ## problem
 
 **1. entrypoint undefined = index.html**
@@ -8,7 +10,8 @@
 postcss.config.js
 
 **3. Cannot read property 'bindings' of null**
-设置 .babelrc
-然后
-@babel/preset-env
+
+设置 ```.babelrc```
+然后安装
+```@babel/preset-env```
 
