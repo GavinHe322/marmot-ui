@@ -32,6 +32,12 @@ module.exports = {
       {
         test: /\.(js|ts|tsx)$/,
         exclude: /node_modules/,
+        use: 'eslint-loader',
+        enforce: 'pre'
+      },
+      {
+        test: /\.(js|ts|tsx)$/,
+        exclude: /node_modules/,
         use: 'babel-loader'
       },
       {
