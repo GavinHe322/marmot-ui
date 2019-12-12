@@ -6,7 +6,10 @@ const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
   mode: 'development',
-  entry: './src/main.js',
+  entry: {
+    'marmot-mobile':  './docs/site/mobile/main.js',
+    'marmot-docs':  './docs/site/desktop/main.js',
+  },
   output: {
     path:  path.join(__dirname, '../dist'),
     filename: '[name].js'
@@ -71,13 +74,26 @@ module.exports = {
   stats: {
     children: false
   },
+  devServer: {
+    host: '0.0.0.0',
+    open: true,
+    stats: 'errors-only',
+  },
   plugins: [
     new VueLoaderPlugin(),
     new ProgressBarWebpackPlugin(),
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'public/index.html',
+      chunks: ['marmot-mobile'],
+      template: 'docs/site/mobile/index.html',
+      filename: 'mobole.html',
       inject: true,
     }),
+    new HtmlWebpackPlugin({
+      chunks: ['marmot-docs'],
+      template: 'docs/site/desktop/index.html',
+      filename: 'index.html',
+      inject: true,
+    }),
+   
   ]
 }
