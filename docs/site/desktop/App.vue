@@ -1,6 +1,7 @@
 <template>
   <div>
-    1
+    desktop
+    <router-view></router-view>
   </div>
 </template>
 
@@ -9,3 +10,7 @@ export default {
   name: 'desktop',
 };
 </script>
+
+<style lang="less">
+
+</style>
