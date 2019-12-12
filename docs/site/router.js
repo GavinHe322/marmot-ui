@@ -4,9 +4,6 @@ import docConfig from './doc.config.js';
 
 const registerRoute = ({ mobile, componentMap }) => {
   const route = [
-    // {
-    //   path: '*',
-    // }
     {
       path: '/',
       redirect: '/intr'
