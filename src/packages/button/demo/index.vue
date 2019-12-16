@@ -1,5 +1,5 @@
 <template>
   <div>
-    backTop 组件
+    button 组件
   </div>
 </template>

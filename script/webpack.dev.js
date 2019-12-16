@@ -11,8 +11,9 @@ module.exports = {
     'marmot-docs':  './docs/site/desktop/main.js',
   },
   output: {
-    path:  path.join(__dirname, '../dist'),
-    filename: '[name].js'
+    path: path.join(__dirname, '../docs/dist'),
+    publicPath: '/',
+    chunkFilename: 'async_[name].js'
   },
   module: {
     rules: [
@@ -91,7 +92,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       chunks: ['marmot-mobile'],
       template: 'docs/site/mobile/index.html',
-      filename: 'mobole.html',
+      filename: 'mobile.html',
       inject: true,
     }),
     new HtmlWebpackPlugin({
