@@ -9,7 +9,7 @@
 
 <script>
 import docConfig from '../doc.config.js';
-// console.log(docConfig)
+console.log(docConfig)
 export default {
   name: 'mobile',
 };
