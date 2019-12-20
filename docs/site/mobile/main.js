@@ -18,7 +18,6 @@ const router = new VueRouter({
   routes: routes({ mobile: true, componentMap }),
 })
 
-// eslint:disabled
 router.afterEach(() => {
   if (!router.currentRoute.redirectedFrom) {
     Vue.nextTick(() => window.syncPath());
