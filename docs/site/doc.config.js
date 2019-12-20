@@ -11,7 +11,6 @@ export default {
       name: '开发指南',
       groups: [
         {
-          groupsName: 'haa11h',
           list: [
             {
               path: '/intr',
@@ -35,7 +34,7 @@ export default {
             {
               path: '/button',
               name: '按钮'
-            }
+            },
           ]
         }
       ]

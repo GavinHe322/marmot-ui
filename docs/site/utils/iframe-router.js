@@ -16,10 +16,8 @@ export function initIframeRouter() {
     // 如果是父级则改变 iframe，如果是iframe改变则调用 window.top
     if (!isInIframe && !isMobile) {
       const iframe = document.querySelector('iframe');
-      this.console.log(iframe)
       if (iframe) {
         iframeReady(iframe, () => {
-          this.console.log(iframe.contentWindow.changePath(currentDir));
           iframe.contentWindow.changePath(currentDir);
         });
       }
