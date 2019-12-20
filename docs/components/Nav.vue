@@ -14,7 +14,7 @@
         :key="i2"
       >
         <div class="sub-title">
-          <a  v-if="val2.groupsName">
+          <a v-if="val2.groupsName">
             {{ val2.groupsName }}
           </a>
         </div>
@@ -36,15 +36,15 @@
 
 <script>
 export default {
-  data() {
-    return {};
-  },
   props: {
     data: {
       type: Array,
       default: () => [],
       required: true,
     },
+  },
+  data() {
+    return {};
   },
 };
 </script>

@@ -1,12 +1,16 @@
 <template>
   <div class="container">
-    <Header :data="docConfig"/>
+    <Header :data="docConfig" />
     <div class="container-content">
-      <Nav :data="docConfig.nav"/>
+      <Nav :data="docConfig.nav" />
       <div class="content">
-        <router-view class="content-view"></router-view>
+        <router-view class="content-view" />
       </div>
-      <iframe class="iframe" :src="'mobile.html'" frameborder="0"></iframe>
+      <iframe
+        class="iframe"
+        :src="'mobile.html'"
+        frameborder="0"
+      />
     </div>
   </div>
 </template>
@@ -17,7 +21,7 @@ import Header from "../../components/Header.vue";
 import Nav from "../../components/Nav.vue";
 
 export default {
-  name: "desktop",
+  name: "Desktop",
   components: {
     Header,
     Nav,

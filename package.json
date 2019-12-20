@@ -1,13 +1,16 @@
 {
   "name": "marmot-ui",
   "version": "1.0.0",
+  "author": "Gavin",
+  "license": "ISC",
   "description": "为了更好的学习工程化，还有提高编码能力，以及更多等你来发现",
   "main": "index.js",
+  "typings": "types/index.d.ts",
   "scripts": {
     "dev": "webpack-dev-server --config script/webpack.dev.js",
     "build:doc": "webpack --config script/webpack.doc.js",
     "dist": "cd dist && serve",
-    "lint": "eslint ./docs ./script ./src --ext .js,.vue,.ts,.tsx --fix"
+    "lint": "eslint ./docs ./script ./src --ext .js,.vue,.tsx --fix"
   },
   "keywords": [
     "eslint",
@@ -16,8 +19,6 @@
     "docs",
     "markdown"
   ],
-  "author": "Gavin",
-  "license": "ISC",
   "dependencies": {
     "highlight.js": "^9.16.2",
     "vue": "^2.6.10",
@@ -34,6 +35,10 @@
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
+    "@babel/preset-typescript": "^7.7.7",
+    "@typescript-eslint/eslint-plugin": "^2.12.0",
+    "@typescript-eslint/parser": "^2.12.0",
+    "@vue/babel-preset-jsx": "^1.1.2",
     "autoprefixer": "^9.7.3",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",

@@ -1,9 +1,13 @@
 <template>
   <div>
     mobole
-     <router-link to="/backTop">backTop</router-link>
-    <router-link to="/button">button</router-link>
-    <router-view></router-view>
+    <router-link to="/backTop">
+      backTop
+    </router-link>
+    <router-link to="/button">
+      button
+    </router-link>
+    <router-view />
   </div>
 </template>
 
@@ -11,6 +15,6 @@
 import docConfig from "../doc.config.js";
 window.console.log(docConfig);
 export default {
-  name: "mobile",
+  name: "Mobile",
 };
 </script>

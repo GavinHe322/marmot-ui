@@ -1,5 +1,20 @@
 <template>
   <div>
-    button 组件
+    <Button :text="'你好'" />
   </div>
 </template>
+
+<script>
+import Button from "../index.tsx";
+
+export default {
+  name: "ButtonDemo",
+  components: {
+    Button,
+  },
+  data() {
+    return {
+    };
+  },
+}
+</script>

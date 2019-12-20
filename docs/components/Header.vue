@@ -1,6 +1,10 @@
 <template>
   <div class="header">
-    <input type="text" class="doc-input" placeholder="搜索文档...">
+    <input
+      type="text"
+      class="doc-input"
+      placeholder="搜索文档..."
+    >
   </div>
 </template>
 
