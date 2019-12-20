@@ -13,7 +13,6 @@
 import docConfig from "../doc.config.js";
 import Header from '../../components/Header.vue';
 import Nav from '../../components/Nav.vue';
-console.log(docConfig.nav)
 
 export default {
   name: "desktop",
