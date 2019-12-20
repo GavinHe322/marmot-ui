@@ -20,15 +20,18 @@ function iframeReady(iframe, callback) {
     }
   };
 
-  if (doc.readyState === 'complete') {
+  if (doc.readyState === "complete") {
     interval();
   } else {
     iframe.onload = interval;
   }
 }
 
+import highlight from "./highlight.js";
+
 export {
   importAll,
   isMobile,
-  iframeReady
+  iframeReady,
+  highlight,
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="desk-nav">
-    <div 
-      v-for="(val1, i1) in data" 
+    <div
+      v-for="(val1, i1) in data"
       :key="i1"
     >
       <div class="title">
@@ -9,8 +9,8 @@
           {{ val1.name }}
         </a>
       </div>
-      <div 
-        v-for="(val2, i2) in val1.groups" 
+      <div
+        v-for="(val2, i2) in val1.groups"
         :key="i2"
       >
         <div class="sub-title">
@@ -18,12 +18,12 @@
             {{ val2.groupsName }}
           </a>
         </div>
-        <div 
-          v-for="(val3, i3) in val2.list" 
+        <div
+          v-for="(val3, i3) in val2.list"
           :key="i3"
         >
-          <router-link 
-            :to="val3.path" 
+          <router-link
+            :to="val3.path"
             class="a"
           >
             {{ val3.name }}
@@ -43,9 +43,9 @@ export default {
     data: {
       type: Array,
       default: () => [],
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 };
 </script>
 

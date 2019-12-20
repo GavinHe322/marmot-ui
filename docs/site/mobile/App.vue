@@ -8,8 +8,9 @@
 </template>
 
 <script>
-// import docConfig from '../doc.config.js';
+import docConfig from "../doc.config.js";
+window.console.log(docConfig);
 export default {
-  name: 'mobile',
+  name: "mobile",
 };
 </script>

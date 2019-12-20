@@ -1,17 +1,19 @@
-import Vue from 'vue';
+import Vue from "vue";
 /*eslint-disable*/
 import VueRouter from 'vue-router';
 import App from './App.vue';
 import routes from '../router.js';
 import '../../../src/packages/index.less';
+import 'highlight.js/styles/github.css';
 
-import { importAll, isMobile } from '../utils/index.js';
+import { importAll, isMobile, highlight } from '../utils/index.js';
 
 if (isMobile) {
   location.replace('mobile.html' + location.hash);
 }
 
 Vue.use(VueRouter)
+Vue.mixin(highlight)
 
 const docs = {};
 const docsFromMarkdown = require.context('../../markdown', false, /.md$/);

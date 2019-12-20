@@ -3,7 +3,9 @@
     <Header :data="docConfig"/>
     <div class="container-content">
       <Nav :data="docConfig.nav"/>
-      <router-view class="content"></router-view>
+      <div class="content">
+        <router-view class="content-view"></router-view>
+      </div>
       <iframe class="iframe" :src="'mobile.html'" frameborder="0"></iframe>
     </div>
   </div>
@@ -11,8 +13,8 @@
 
 <script>
 import docConfig from "../doc.config.js";
-import Header from '../../components/Header.vue';
-import Nav from '../../components/Nav.vue';
+import Header from "../../components/Header.vue";
+import Nav from "../../components/Nav.vue";
 
 export default {
   name: "desktop",
@@ -22,7 +24,7 @@ export default {
   },
   data() {
     return {
-      docConfig
+      docConfig,
     };
   },
 };
@@ -35,8 +37,12 @@ export default {
 
 .content {
   margin: 0 auto;
-  width: 800px;
+  width: 750px;
   box-sizing: border-box;
+}
+
+.content-view {
+  padding: 20px 30px 0;
 }
 
 .iframe {
@@ -47,6 +53,7 @@ export default {
   height: 640px;
   border-radius: 4px;
 }
+
 
 @media (min-width: 1680px) {
   .container, .content {

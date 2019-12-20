@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import Vue from "vue";
 /*eslint-disable*/
 import VueRouter from 'vue-router';
 import App from './App.vue';

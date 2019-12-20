@@ -14,8 +14,6 @@ const registerRoute = ({ mobile, componentMap }) => {
     }
   ];
   docConfig.nav.forEach(navs => {
-    
-   
     function addRoute(page) {
       let { path } = page;
       if (path) {
@@ -23,7 +21,6 @@ const registerRoute = ({ mobile, componentMap }) => {
 
         let component;
         if (mobile) {
-
           const module = componentMap[`./${path}/demo/index.vue`];
           if (module) {
             component = module.default

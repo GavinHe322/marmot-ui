@@ -5,17 +5,17 @@
  * url
  */
 
- import { iframeReady, isMobile } from './index.js';
+ import { iframeReady, isMobile } from "./index.js";
 
 export function initIframeRouter() {
   window.syncPath = function () {
     const router = window.vueRouter;
     const isInIframe = window !== window.top;
-    const currentDir = router.history.current.path.replace('/', '');
+    const currentDir = router.history.current.path.replace("/", "");
 
     // 如果是父级则改变 iframe，如果是iframe改变则调用 window.top
     if (!isInIframe && !isMobile) {
-      const iframe = document.querySelector('iframe');
+      const iframe = document.querySelector("iframe");
       if (iframe) {
         iframeReady(iframe, () => {
           iframe.contentWindow.changePath(currentDir);
@@ -26,7 +26,7 @@ export function initIframeRouter() {
     }
   };
 
-  window.changePath = function (path = '') {
+  window.changePath = function (path = "") {
     // https://github.com/vuejs/vue-router/issues/2872
     window.vueRouter.push(path).catch(() => {});
   };
