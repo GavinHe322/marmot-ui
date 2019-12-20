@@ -7,7 +7,7 @@
     "dev": "webpack-dev-server --config script/webpack.dev.js",
     "build:doc": "webpack --config script/webpack.doc.js",
     "dist": "cd dist && serve",
-    "lint": "eslint ./docs --ext .js,.vue,.ts,.tsx --fix"
+    "lint": "eslint ./docs ./script ./src --ext .js,.vue,.ts,.tsx --fix"
   },
   "keywords": [
     "eslint",
