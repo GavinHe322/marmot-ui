@@ -1,0 +1,16 @@
+
+language: node_js
+node_js:
+    - lts/* # 指定最新版本
+install:
+    - npm install
+script:
+    - npm run build:doc
+deploy:
+  provider: pages
+  skip-cleanup: true
+  keep-history: true
+  local-dir: dist
+  on:
+    branch: master
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
